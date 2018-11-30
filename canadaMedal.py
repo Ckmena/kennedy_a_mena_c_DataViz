@@ -11,6 +11,8 @@ with open('data/OlympicsWinter.csv') as csvfile:
     reader = csv.reader(csvfile)
     line_count = 0
 
+    print("there are ", line_count, "lines")
+
     for row in reader:
         if line_count is 0:
             categories.append(row)
@@ -20,6 +22,8 @@ with open('data/OlympicsWinter.csv') as csvfile:
             canada.append([int(row[0]), row[5], row[6], row[7]])
         else:
             world.append([int(row[0]), row[5], row[6], row[7]])
+
+print("there are ", line_count, "lines")
 
 print('total medal for canada:', len(canada))
 print('rest of the world:', len(world))
@@ -68,6 +72,7 @@ pct_women = len(women) / len(canada) * 100
 
 print('men percentage', pct_men)
 print('women percentage', pct_women)
+print("lines", line_count)
 
 #pieChart***** Start
 labels = "Men", "Women"
