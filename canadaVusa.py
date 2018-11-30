@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 
 canada = []
 usa = []
+world = []
 
 categories = []
 
@@ -21,6 +22,8 @@ with open('data/OlympicsWinter.csv') as csvfile:
                 canada.append([int(row[0]), row[5], row[6], row[7]])
             elif row[4] == "USA":
                 usa.append([int(row[0]), row[5], row[6], row[7]])
+            else:
+                world.append([int(row[0]), row[5], row[6], row[7]])
                 line_count += 1
 
 print('total medal for canada:', len(canada))
